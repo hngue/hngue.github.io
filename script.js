@@ -52,4 +52,31 @@ window.addEventListener('scroll', function() {
       video.play();
     }
   });
+
   
+// Get all tags
+const tags = document.querySelectorAll('.tag');
+
+// Attach click event listeners to tags
+tags.forEach(tag => {
+  tag.addEventListener('click', () => {
+    const clickedTag = tag.getAttribute('data-tag');
+    filterVideos(clickedTag);
+  });
+});
+
+// Function to filter videos based on tag
+function filterVideos(tag) {
+  const videos = document.querySelectorAll('.video-box');
+
+  videos.forEach(video => {
+    const videoTags = video.getAttribute('data-tags').split(' ');
+    const isVisible = videoTags.includes(tag) || tag === 'all';
+
+    if (isVisible) {
+      video.style.display = 'block';
+    } else {
+      video.style.display = 'none';
+    }
+  });
+}

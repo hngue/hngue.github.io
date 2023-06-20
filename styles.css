@@ -11,7 +11,7 @@
   }
 
   h1{
-    margin-bottom: 20;
+    margin-bottom: 10px;
   }
 
     /* Header styles */
@@ -209,12 +209,13 @@
   object-fit: cover;
 }
 
+
   /* As Seen On gallery styles */
   /* Styles specific to the scrolling gallery */
 
   .as-seen-on {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
   }
   
   .section-title {
@@ -226,6 +227,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+    margin-bottom: 20px;
   }
   
   .gallery-scroll img {
@@ -313,6 +315,7 @@
     color: #fff;
     padding: 10px;
     text-align: center;
+    margin-top: 20px;
   }
   
   footer p {
@@ -323,14 +326,7 @@
 .container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 20px;
-}
-
-footer {
-  background-color: #000000;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
+  padding: 25px;
 }
 
 footer p {
@@ -340,5 +336,119 @@ footer p {
 /* Styles specific to the About page */
 
 .about-section {
-  margin-top: 50px;
+  margin-top: 25px;
+}
+
+.about-section a {
+  text-decoration: none; /* Remove underline */
+  color: #0dc206; /* Change text color to blue */
+}
+
+.about-section a:hover{
+  opacity: 1; /* Set opacity to 1 on hover */
+  color: #bcffc4;
+}
+
+
+.video-grid-container {
+  display: flex;
+  justify-content: center; /* Center the grid horizontally */
+  align-items: center; /* Center the grid vertically */
+  padding: 0 20%; /* Add padding on the left and right sides */
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 20px;
+}
+
+.video-box {
+  display: flex;
+  align-items: center;
+  border: 0px solid #ccc;
+  padding: 10px;
+}
+
+.video-box:hover{
+  opacity: 1; /* Set opacity to 1 on hover */
+  color: #0dc206;
+  background-color: #e3ffe6;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.thumbnail {
+  width: 212.4px;
+  height: 120px;
+  margin-right: 10px;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-grid-item {
+  display: flex;
+  align-items: center;
+  overflow: hidden; /* Add overflow property to prevent image from getting cut off */
+}
+
+.video-thumbnail {
+  flex: 0 0 40%; /* Adjust the width of the thumbnail as desired */
+  max-width: 100%; /* Add max-width property to prevent the thumbnail from exceeding its container */
+  object-fit: cover;
+}
+
+.video-details {
+  flex: 1; /* Take remaining space */
+  padding: 0 10px; /* Add padding around the details */
+}
+
+.video-description {
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.video-date-tags {
+  display: flex;
+  align-items: center;
+}
+
+.video-date {
+  /* Keep the existing styles */
+  margin-bottom: 0;
+  margin-left: 10px; /* Add margin to separate date and tags */
+  margin-top: 10px;
+
+  font-size: 15px;
+}
+
+.video-tags {
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 2px 5px;
+  background-color: #e3ffe6;
+  color: #000000;
+  border-radius: 20px;
+  cursor: default;
+  margin-right: 10px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.tag:hover {
+  background-color: #fff;
+  transition: background-color 0.4s ease;
+}
+
+.video-box:hover .tag {
+  color: #0dc206; /* Change the tag text color on hover */
+  transition: color 0.4s ease;
 }
