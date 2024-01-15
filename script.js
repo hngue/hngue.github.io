@@ -3,8 +3,8 @@ const galleryScroll = document.querySelector('.gallery-scroll');
 // Calculate the total width of the gallery-scroll element
 const galleryWidth = galleryScroll.scrollWidth;
 
-// Set the animation duration based on the gallery width
-const animationDuration = (galleryWidth / 100) * 5;
+// Set the animation duration for scrolling
+const animationDuration = (galleryWidth / 100) * 1.5; // Adjust the factor (2) to control the speed
 
 // Apply the animation duration to the CSS
 galleryScroll.style.animationDuration = `${animationDuration}s`;
@@ -12,6 +12,14 @@ galleryScroll.style.animationDuration = `${animationDuration}s`;
 // Duplicate the gallery content
 const galleryContent = galleryScroll.innerHTML;
 galleryScroll.innerHTML += galleryContent;
+
+// Add a keyframes animation rule
+const keyframes = `scrollGallery ${animationDuration}s linear infinite`;
+document.styleSheets[0].insertRule(`@keyframes scrollGallery { 0% { transform: translateX(0); } 100% { transform: translateX(-${galleryWidth}px); }}`, 0);
+
+// Apply the animation to the gallery
+galleryScroll.style.animation = keyframes;
+
 
 
 
