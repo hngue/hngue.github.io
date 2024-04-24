@@ -6,8 +6,9 @@
   
   /* Set default font and background */
   body {
-    font-family: "Heebo", sans-serif;
+    font-family: "Arial", sans-serif;
     background-color: #ffffff;
+    line-height: 1.25;
   }
 
   h1{
@@ -348,6 +349,53 @@ footer p {
   opacity: 1; /* Set opacity to 1 on hover */
   color: #bcffc4;
 }
+
+.author {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.author-text p {
+  margin-bottom: 20px; /* Adjust the spacing between paragraphs */
+}
+
+.author-image {
+  flex: 0 0 30%; /* Adjust the width of the image container as needed */
+  margin-left: 20px; /* Adjust the spacing between the text and image */
+  margin-top: 40px;
+}
+
+.author-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.author-info .author-text {
+  flex: 1;
+  margin-right: 20px; /* Adjust as needed */
+}
+
+.author-info img {
+  flex: 1;
+  max-width: 100%; /* Ensure the image doesn't overflow its container */
+}
+
+@media screen and (max-width: 768px) {
+  .author-info .author-text,
+  .author-info img {
+      flex: 100%; /* On smaller screens, make both the text and image take full width */
+      margin-right: 0; /* Reset margin */
+  }
+}
+
+.image-caption {
+  font-style: italic;
+  font-size: 14px;
+  color: #888; /* Adjust the color as needed */
+}
+
 
 
 .video-grid-container {
